@@ -7,6 +7,7 @@ include("../include/auth_session.php");
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,11 +26,13 @@ include("../include/auth_session.php");
     <link rel="shortcut icon" href="../images/logo.png">
 
     <link rel="stylesheet" href="../css/style.css" />
+
 </head>
 
 <!-- NAVBAR PART STARTS FROM HERE -->
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
     <div class="nav navbar navbar-expand-lg bg-dark navbar-dark py-1 fixed-top">
         <div class="container">
             <a href="#" class="navbar-brand">
@@ -43,28 +46,29 @@ include("../include/auth_session.php");
             <div class="container collapse navbar-collapse justify-content-center" id="navlink">
                 <div class="container">
                     <ul class="navbar-nav">
-                        <li class="nav-item px-3 ms-auto mb-2 mb-lg-0">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item mx-3 ms-auto mb-2 mb-lg-0">
+                            <a href="#section1" class="nav-link">
                                 <i class="bi bi-house"> </i> Home
                             </a>
                         </li>
-                        <li class="nav-item px-3">
+                        <li class="nav-item  mx-3">
                             <a href="./item.php" class="nav-link">
-                            <i class="bi bi-diagram-3-fill"> </i> items
+                            <i class="bi bi-diagram-3-fill">  </i> items
                             </a>
                         </li>
-                        <li class="nav-item px-3">
+                        <li class="nav-item mx-3">
                             <a href="./user.php" class="nav-link">
-                            <i class="bi bi-people-fill"> </i> Users
-                            </a>
-                            <li class="nav-item px-3">
-                            <a href="./order.php" class="nav-link">
-                            <i class="bi bi-bag-plus-fill"> </i> Order
+                            <i class="bi bi-people-fill"> </i>Users
                             </a>
                         </li>
-                        <li class="nav-item px-3">
+                        <li class="nav-item mx-3">
+                            <a href="./order.php" class="nav-link">
+                            <i class="bi bi-bag-plus-fill"> </i>Orders
+                            </a>
+                        </li>
+                        <li class="nav-item mx-3">
                             <a href="./payment.php" class="nav-link">
-                            <i class="bi bi-wallet-fill"> </i> Payment
+                            <i class="bi bi-wallet-fill"> </i>Payment
                             </a>
                         </li>
                         <li class="nav-item ms-auto mb-2 mb-lg-0">
@@ -73,7 +77,7 @@ include("../include/auth_session.php");
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="../include/logout.php" class="nav-link">
                             <i class="bi bi-box-arrow-left"></i> </i> logout
                             </a>
                         </li>

@@ -58,7 +58,6 @@
                                 <i class="bi bi-telephone"> </i> Contact
                             </a>
                         </li> -->
-                        </li>
                         <li class="nav-item ms-auto mb-2 mb-lg-0">
                             <a href="./pages/registration.php" class="nav-link">
                             <i class="bi bi-box-arrow-in-right"> </i> signup

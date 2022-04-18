@@ -47,14 +47,13 @@ include("../include/auth_session.php");
                                 <i class="bi bi-house"> </i> Home
                             </a>
                         </li>
-                        </li>
                         <li class="nav-item ms-auto mb-2 mb-lg-0">
                             <a href="#" class="nav-link">
                                 <i class="bi bi-person-circle"> </i> <?php echo $_SESSION['username']; ?>!
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../index.php" class="nav-link">
+                            <a href="../include/logout.php" class="nav-link">
                             <i class="bi bi-box-arrow-left"></i> </i> logout
                             </a>
                         </li>
@@ -67,7 +66,7 @@ include("../include/auth_session.php");
 
     <!-- BODY PART START FROM HERE -->
     <!-- HOME PART START FROM HERE-->
-    <div id="section1" class="container-fluid  text-white text-center justify-content-center img p-5">
+    <div id="section1" class="container-fluid text-center justify-content-center img p-5">
         <br>
         <h1 class="p-5 text-primary">
             Welcome To MyOnlineMeal
@@ -318,7 +317,7 @@ include("../include/auth_session.php");
     <!-- SERVICE PART ENDS HERE -->
 
     <!-- ADOUT PART START FROM HERE-->
-    <div id="section3" class="container-fluid text-center justify-content-center bg-danger text-light text-strong">
+    <div id="section3" class="container-fluid text-center justify-content-center bg-primary text-light text-strong">
         <marquee behavior="alternate" scrollamount="12">
             <h1> About Us </h1>
         </marquee>
