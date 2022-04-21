@@ -9,7 +9,6 @@
     <link rel="shortcut icon" href="../images/logo.png">
 
     <link rel="stylesheet" href="../css/style.css" />
-
 </head>
 
 <body class="img">
@@ -40,9 +39,11 @@
         }
     } else {
     ?>
+    
     <br>
     <br>
     <br>
+
         <form class="form" method="post" name="login">
             <h1 class="login-title">Login Into bhOjaN</h1>
             <input type="text" class="form-control login-input" name="username" placeholder="Username" autofocus="true" required />

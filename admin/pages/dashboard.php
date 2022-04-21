@@ -53,7 +53,7 @@ include("../include/auth_session.php");
                         </li>
                         <li class="nav-item  mx-3">
                             <a href="./item.php" class="nav-link">
-                            <i class="bi bi-diagram-3-fill">  </i> items
+                            <i class="bi bi-diagram-3-fill">  </i> Items
                             </a>
                         </li>
                         <li class="nav-item mx-3">

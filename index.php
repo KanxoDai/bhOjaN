@@ -19,7 +19,7 @@
     <!-- SHORTCUT LOGO -->
     <link rel="shortcut icon" href="./images/logo.png">
 
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.css" />
 </head>
 
 <!-- NAVBAR PART STARTS FROM HERE -->
@@ -43,7 +43,7 @@
                                 <i class="bi bi-house"> </i> Home
                             </a>
                         </li>
-                       <!--<li class="nav-item px-3">
+                       <li class="nav-item px-3">
                             <a href="#section2" class="nav-link">
                                 <i class="bi bi-list-task"> </i> Service
                             </a>
@@ -57,7 +57,7 @@
                             <a href="#section4" class="nav-link">
                                 <i class="bi bi-telephone"> </i> Contact
                             </a>
-                        </li> -->
+                        </li>
                         <li class="nav-item ms-auto mb-2 mb-lg-0">
                             <a href="./pages/registration.php" class="nav-link">
                             <i class="bi bi-box-arrow-in-right"> </i> signup

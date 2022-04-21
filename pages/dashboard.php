@@ -5,6 +5,7 @@ include("../include/auth_session.php");
 
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +24,7 @@ include("../include/auth_session.php");
     <!-- SHORTCUT LOGO -->
     <link rel="shortcut icon" href="../images/logo.png">
 
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/main.css" />
 </head>
 
 <!-- NAVBAR PART STARTS FROM HERE -->
@@ -47,6 +48,21 @@ include("../include/auth_session.php");
                                 <i class="bi bi-house"> </i> Home
                             </a>
                         </li>
+                        <li class="nav-item px-3">
+                            <a href="#section2" class="nav-link">
+                                <i class="bi bi-list-task"> </i> Service
+                            </a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a href="#section3" class="nav-link">
+                                <i class="bi bi-info-lg"> </i>About
+                            </a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a href="#section4" class="nav-link">
+                                <i class="bi bi-telephone"> </i> Contact
+                            </a>
+                        </li>
                         <li class="nav-item ms-auto mb-2 mb-lg-0">
                             <a href="#" class="nav-link">
                                 <i class="bi bi-person-circle"> </i> <?php echo $_SESSION['username']; ?>!
@@ -54,7 +70,7 @@ include("../include/auth_session.php");
                         </li>
                         <li class="nav-item">
                             <a href="../include/logout.php" class="nav-link">
-                            <i class="bi bi-box-arrow-left"></i> </i> logout
+                            <i class="bi bi-box-arrow-left"> </i> Logout
                             </a>
                         </li>
                     </ul>
@@ -100,7 +116,7 @@ include("../include/auth_session.php");
             <h1>Our-Services</h1>
         </marquee>
         <h1>
-            <div class="row bg-white p-3 ">
+            <div class="row bg-white p-3">
                 <div class="col-lg h-100 border border-danger rounded">
                     <a class="nav-link text-primary bg-warning p-1">
                         Todays Menu
@@ -321,7 +337,7 @@ include("../include/auth_session.php");
         <marquee behavior="alternate" scrollamount="12">
             <h1> About Us </h1>
         </marquee>
-        <div class="row bg-secondary text-white  p-5">
+        <div class="row bg-secondary p-5 text-white">
             Retail food delivery is a courier service in which a restaurant, store, or independent food-delivery company
             delivers food to a customer.An order is typically made either through a restaurant or grocer's websiteor
             mobile app, or through a food ordering company. The delivered items can include entrees, sides, drinks,

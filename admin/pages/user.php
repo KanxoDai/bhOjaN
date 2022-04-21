@@ -1,6 +1,9 @@
 <?php
 //include auth_session.php file on all user panel pages
 include("../include/auth_session.php");
+include_once('../include/db.php');
+$sql = 'SELECT * FROM users';
+$result   = mysqli_query($con, $sql);
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +45,11 @@ include("../include/auth_session.php");
             <div class="container collapse navbar-collapse justify-content-center" id="navlink">
                 <div class="container">
                     <ul class="navbar-nav">
-                        <li class="nav-item px-3 ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item px-3 ms-auto mb-2 mb-lg-0">
+                            <a href="./dashboard.php" class="nav-link">
+                            <i class="bi bi-house"> </i> GoToHome
+                            </a>
+                        <li class="nav-item px-3">
                             <a href="#section1" class="nav-link">
                                 <i class="bi bi-people-fill"> </i> Users
                             </a>
@@ -63,11 +70,14 @@ include("../include/auth_session.php");
         </div>
     </div>
     <!-- End of navbar -->
+
     <br>
     <br>
     <br>
+
     <!-- body start from here -->
     <!-- table start here -->
+
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -76,30 +86,70 @@ include("../include/auth_session.php");
                 <th scope="col">email</th>
                 <th scope="col">password</th>
                 <th scope="col">phone</th>
-                <th scope="col">created_datetime</th>
+                <th scope="col">create_datetime</th>
             </tr>
-        </thead>
         <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td> </td>
-                <td></td>
-            </tr>
+
+        <?php
+            $sn = 1;
+                if(mysqli_num_rows($result) > 0){
+                    while($row = mysqli_fetch_assoc($result)){
+                        
+                        echo '
+                        <tr>
+                        <td>
+                            '.$sn.'
+                        </td>
+                        <td>
+                            '.$row['username'].'
+                        </td>
+                        <td>
+                            '.$row['email'].'
+                        </td>
+                        <td>
+                            '.$row['password'].'
+                        </td>
+                        <td>
+                        '.$row['phone'].'
+                    </td>
+                    <td>
+                    '.$row['create_datetime'].'
+                </td>
+                    </tr>
+                        ';
+                        $sn = $sn + 1;
+
+                    }
+                }
+            ?>
+        
         </tbody>
+        </thead>
     </table>
+    <br>
+    <hr>
+    <br>
+    <section class="p-3 text-center">
+        <div class="container border border-warning">
+            <div class="text-center container p-3 lead">
+                <form class="form-signin" method="post" action="../include/addItem.php">
+                    <br>
+                    <label for="name" class="sr-only">User Name</label>
+                    <input type="text" name="username" class="form-control mb-3" placeholder="User name" required autofocus><br>
+                    <label for="inputEmail" class="sr-only">Email</label>
+                    <input type="text" name="email" class="form-control mb-3" placeholder="Email" required>
+                    <label for="type" class="sr-only">Password</label>
+                    <input type="password" name="password" class="form-control mb-3" placeholder="Password" required><br>
+                    <label for="inputEmail" class="sr-only">Phone</label>
+                    <input type="text" name="phone" class="form-control mb-3" placeholder="Phone" required>
+                    <label for="inputEmail" class="sr-only">Create_datetime</label>
+                    <input type="text" name="creaate_datetime" class="form-control mb-3" placeholder="Phone" required>
+                    <button class="btn btn-lg btn-outline-warning btn-block" name="submit" type="submit">Add</button>
+
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

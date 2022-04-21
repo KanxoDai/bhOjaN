@@ -26,7 +26,7 @@
         $phone    = mysqli_real_escape_string($con, $phone);
         $password = stripslashes($_REQUEST['password']);
         $password = mysqli_real_escape_string($con, $password);
-        $create_datetime = date("Y-m-d H:i:s");
+        $create_datetime = date("Y-m-d h:i:sa");
         $query    = "INSERT into `users` (username, password, email, phone, create_datetime)
                      VALUES ('$username', '" . md5($password) . "', '$email', '$phone', '$create_datetime')";
         $result   = mysqli_query($con, $query);

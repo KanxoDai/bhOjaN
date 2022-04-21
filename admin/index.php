@@ -38,8 +38,12 @@
         }
     } else {
     ?>
+
+        <br>
+        <br>
+        <br>
         <form class="form" method="post" name="login">
-            <h1 class="login-title">Login Into bhOjaN</h1>
+            <h1 class="login-title">Admin Login Into bhOjaN</h1>
             <input type="text" class="form-control login-input" name="username" placeholder="Username" autofocus="true" required />
             <input type="password" class="form-control login-input" name="password" placeholder="Password" required />
             <center>

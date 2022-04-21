@@ -1,6 +1,10 @@
 <?php
 //include auth_session.php file on all user panel pages
 include("../include/auth_session.php");
+include_once('../include/db.php');
+$sql = 'SELECT * FROM items';
+$result = mysqli_query($con, $sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +46,11 @@ include("../include/auth_session.php");
             <div class="container collapse navbar-collapse justify-content-center" id="navlink">
                 <div class="container">
                     <ul class="navbar-nav">
-                        <li class="nav-item px-3 ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item px-3 ms-auto mb-2 mb-lg-0">
+                            <a href="./dashboard.php" class="nav-link">
+                            <i class="bi bi-house"> </i> GoToHome
+                            </a>
+                        <li class="nav-item px-3">
                             <a href="#section1" class="nav-link">
                                 <i class="bi bi-diagram-3-fill"> </i> Items
                             </a>
@@ -63,11 +71,14 @@ include("../include/auth_session.php");
         </div>
     </div>
     <!-- End of navbar -->
+
     <br>
     <br>
     <br>
+
     <!-- body start from here -->
     <!-- table start here -->
+
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -78,25 +89,54 @@ include("../include/auth_session.php");
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td> </td>
-                <td></td>
-            </tr>
+
+            <?php
+            $sn = 1;
+                if(mysqli_num_rows($result) > 0){
+                    while($row = mysqli_fetch_assoc($result)){
+                        
+                        echo '
+                        <tr>
+                        <td>
+                            '.$sn.'
+                        </td>
+                        <td>
+                            '.$row['name'].'
+                        </td>
+                        <td>
+                            '.$row['price'].'
+                        </td>
+                        <td>
+                            '.$row['type'].'
+                        </td>
+                    </tr>
+                        ';
+                        $sn = $sn + 1;
+
+                    }
+                }
+            ?>
+            
         </tbody>
     </table>
+    <br>
+    <hr>
+    <br>
+    <section class="p-3 text-center">
+        <div class="container border border-warning">
+            <div class="text-center container p-3 lead">
+                <form class="form-signin" method="post" action="../include/addItem.php">
+                    <br>
+                    <label for="name" class="sr-only">Food Name</label>
+                    <input type="text" name="name" class="form-control mb-3" placeholder="Food name" required autofocus><br>
+                    <label for="inputEmail" class="sr-only">Price</label>
+                    <input type="text" name="price" class="form-control mb-3" placeholder="Price of food" required>
+                    <label for="type" class="sr-only">Type</label>
+                    <input type="text" name="type" class="form-control mb-3" placeholder="Type" required><br>
+                    <button class="btn btn-lg btn-outline-warning btn-block" name="submit" type="submit">Add</button>
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
