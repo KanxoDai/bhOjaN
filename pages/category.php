@@ -10,7 +10,7 @@ include("../include/auth_session.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> User_dashboard </title>
+    <title> Category </title>
 
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -25,7 +25,6 @@ include("../include/auth_session.php");
     <link rel="shortcut icon" href="../images/logo.png">
 
     <!-- Own CSS -->
-    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/main.css" />
 </head>
 
@@ -49,7 +48,7 @@ include("../include/auth_session.php");
                                 <i class="bi bi-house"> </i> Home
                             </a>
                         </li>
-                        <li class="nav-item ms-auto mb-2 mb-lg-0 nav-item dropdown">
+                        <li class="nav-item nav-item dropdown px-3 ms-auto mb-2 mb-lg-0">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-person-circle"> </i> <?php echo $_SESSION['username']; ?>!
                             </a>
@@ -64,22 +63,56 @@ include("../include/auth_session.php");
         </div>
     </div>
     <!-- Navbar Ends -->
-    <br /> <br />
 
-    <body class=>
+    <br>
+    <br>
+    <br>
 
-        <!-- Form Start -->
-        <form class="form" method="post" name="login">
-            <h1 class="login-title"><span class="text-dark"> Fill The Form Below To Confirm Order </span></h1>
-            <input type="text" class="form-control login-input" name="username" placeholder="Enter Your Name Here" autofocus="true" required />
-            <input type="text" class="form-control login-input" name="" placeholder="Enter Your Name Here" autofocus="true" required />
-            <input type="text" class="form-control login-input" name="username" placeholder="Enter Your Name Here" autofocus="true" required />
-            <br>
-            <br>
-            <input type="submit" value="Order" name="submit" class="login-button" />
+    <!-- Category Start -->
+    <div id="section2" class="container-fluid text-strong text-center text-primary justify-content-center" style="background-color:#fff;">
+        <br /> <br /> <br>
+        <h1 class="text-dark text-strong">Explore Foods</h1>
+        <br />
+        <div class="row p-3">
+            <div class="col-lg">
+                <div class="thumbnail">
+                    <img src="../images/momo.jpg" alt="MOMO" class="figure-img img-fluid rounded border border-dark" style="width:80%">
+                    <div class="caption">
+                        <p>
+                        <h5>MoMo </h5>
+                        </p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg">
+                <div class="thumbnail">
+                    <img src="../images/pizza.jpg" alt="MOMO" class="figure-img img-fluid rounded border border-dark" style="width:80%">
+                    <div class="caption">
+                        <p>
+                        <h5>Pizza </h5>
+                        </p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg">
+                <div class="thumbnail">
+                    <img src="../images/burger.jpg" alt="MOMO" class="figure-img img-fluid rounded border border-dark" style="width:80%">
+                    <div class="caption">
+                        <p>
+                        <h5>Burger </h5>
+                        </p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <!-- Category Ends -->
 
-        </form>
-        <!-- Form Ends -->
-        <?php
-        include("../include/footer.php");
-        ?>
+
+    <?php
+    include("../include/footer.php");
+    ?>

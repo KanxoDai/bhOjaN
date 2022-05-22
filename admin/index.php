@@ -5,15 +5,19 @@
     <meta charset="utf-8" />
     <title>Admin_login</title>
 
-    <!-- SHORTCUT LOGO -->
+    <!-- Shortcut Logo -->
     <link rel="shortcut icon" href="./images/logo.png">
 
+    <!-- Own CSS -->
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body class="img">
+
+    <!-- Database -->
     <?php
     require('./include/db.php');
+    
     session_start();
     // When form submitted, check and create user session.
     if (isset($_POST['username'])) {
@@ -42,6 +46,8 @@
         <br>
         <br>
         <br>
+
+        <!-- Form Start -->
         <form class="form" method="post" name="login">
             <h1 class="login-title">Admin Login Into bhOjaN</h1>
             <input type="text" class="form-control login-input" name="username" placeholder="Username" autofocus="true" required />
@@ -56,9 +62,12 @@
             <input type="submit" value="Login" name="submit" class="login-button" />
             <p class="link">Don't have an account? <a href="./pages/registration.php">Registration Now</a></p>
         </form>
+        <!-- Form Ends -->
+
     <?php
     }
     ?>
+
 </body>
 
 </html>

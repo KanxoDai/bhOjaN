@@ -5,15 +5,22 @@
     background-position: center;
 }
 
-.login {
-    background-image: url("../images/home.jpg");
+.imgg {
+    background-image: url("../images/footer.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.imgg {
-    background-image: url("../images/login.jpg");
+.imgga {
+    background-image: url("../images/navbar.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.imggaa {
+    background-image: url("../images/aboutus.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

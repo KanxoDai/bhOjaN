@@ -1,15 +1,21 @@
+/* body {
+    background-color: black;
+} */
+
 .form {
     margin: 50px auto;
     width: 300px;
     padding: 30px 25px;
-    background: white;
+    /* background: black; */
     align-items: center;
+    background: transparent;
+    color: #fff;
 }
 
 h1.login-title {
-    color: gray;
+    color: white;
     margin: 0px auto 25px;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 300;
     text-align: center;
 }
@@ -45,17 +51,28 @@ h1.login-title {
 }
 
 .link {
-    color: #666;
+    color: white;
     font-size: 15px;
     text-align: center;
     margin-bottom: 0px;
 }
 
 .link a {
-    color: #666;
+    color: white;
+}
+
+.link a:hover {
+    color: yellowgreen;
 }
 
 h3 {
     font-weight: normal;
     text-align: center;
+}
+
+.img {
+    background-image: url("../images/footer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

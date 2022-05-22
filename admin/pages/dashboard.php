@@ -7,33 +7,30 @@ include("../include/auth_session.php");
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Admin_dashboard </title>
 
-    <!-- BOOTSTRAP CSS-->
+    <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 
-    <!-- BOOTSTRAP ICONS-->
+    <!-- Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
 
-    <!-- BOOTSTRAP JS -->
+    <!-- Bootstrap JS -->
     <script src="../js/bootstrap.min.js"></script>
 
-    <!-- SHORTCUT LOGO -->
+    <!-- Shortcut Logo -->
     <link rel="shortcut icon" href="../images/logo.png">
 
+    <!-- Own CSS -->
     <link rel="stylesheet" href="../css/style.css" />
-
 </head>
 
-<!-- NAVBAR PART STARTS FROM HERE -->
-
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
-
-    <div class="nav navbar navbar-expand-lg bg-dark navbar-dark py-1 fixed-top">
+    <!-- Navbar Start -->
+    <div class="nav navbar navbar-expand-lg bg-dark navbar-dark py-1 imgga fixed-top">
         <div class="container">
             <a href="#" class="navbar-brand">
                 <span class="text-primary h1 logo">
@@ -51,24 +48,30 @@ include("../include/auth_session.php");
                                 <i class="bi bi-house"> </i> Home
                             </a>
                         </li>
-                        <li class="nav-item  mx-3">
-                            <a href="./item.php" class="nav-link">
-                            <i class="bi bi-diagram-3-fill">  </i> Items
-                            </a>
-                        </li>
                         <li class="nav-item mx-3">
                             <a href="./user.php" class="nav-link">
-                            <i class="bi bi-people-fill"> </i>Users
+                                <i class="bi bi-people-fill"> </i>Users
                             </a>
                         </li>
+                        <li class="nav-item  mx-3">
+                            <a href="./item.php" class="nav-link">
+                                <i class="bi bi-diagram-3-fill"> </i> Category
+                            </a>
+                        </li>
+                        <li class="nav-item  mx-3">
+                            <a href="./item.php" class="nav-link">
+                            <i class="bi bi-basket"></i> Foods
+                            </a>
+                        </li>
+
                         <li class="nav-item mx-3">
                             <a href="./order.php" class="nav-link">
-                            <i class="bi bi-bag-plus-fill"> </i>Orders
+                                <i class="bi bi-bag-plus-fill"> </i>Orders
                             </a>
                         </li>
                         <li class="nav-item mx-3">
                             <a href="./payment.php" class="nav-link">
-                            <i class="bi bi-wallet-fill"> </i>Payment
+                                <i class="bi bi-wallet-fill"> </i>Payment
                             </a>
                         </li>
                         <li class="nav-item ms-auto mb-2 mb-lg-0">
@@ -78,7 +81,7 @@ include("../include/auth_session.php");
                         </li>
                         <li class="nav-item">
                             <a href="../include/logout.php" class="nav-link">
-                            <i class="bi bi-box-arrow-left"></i> </i> logout
+                                <i class="bi bi-box-arrow-left"></i> </i> logout
                             </a>
                         </li>
                     </ul>
@@ -86,13 +89,21 @@ include("../include/auth_session.php");
             </div>
         </div>
     </div>
-    <!-- NAVBAR PART ENDS FROM HERE -->
+    <!-- Navbar Ends -->
 
     <br>
     <br>
     <br>
 
-    <!-- CONTACT PART START FROM HERE-->
+    <!-- Video -->
+    <center>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VRJgmKBR9KQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </center>
+    <!-- Video Ends -->
+
+    <!-- Contact Start -->
     <section class="bg-success p-3">
         <div class="container">
             <div class="row g-4">
@@ -108,18 +119,19 @@ include("../include/auth_session.php");
                     <span class="lead mb-2">+977-9807072190</span>
                 </div>
 
-                <!-- MAP PART START FROM HERE  -->
+                <!-- Map Start -->
                 <div class="col-md text-light ">
                     <iframe class="h-100 w-100 my-0 mx-0" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3572.3040646729582!2d87.2755849!3d26.445926!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1643798027732!5m2!1sen!2snp" allowfullscreen="" loading="lazy"></iframe>
                 </div>
-                <!-- MAP PART ENDS HERE  -->
+                <!-- Map Ends -->
+
             </div>
         </div>
     </section>
-    <!-- CONTACT PART ENDS HERE -->
+    <!-- Contact Ends -->
 
-    <!-- DATE PART START FROM HERE-->
-    <section class="p-1 bg-warning">
+    <!-- Date Start -->
+    <section class="p-2 bg-warning">
         <div class="container text-dark text-center">
             <span class="h1 lead fw-bold text-dark">
                 <?php $year = date("F");
@@ -133,17 +145,17 @@ include("../include/auth_session.php");
             </span>
         </div>
     </section>
-    <!-- DATR PART ENDS FROM HERE -->
+    <!-- Date Ends -->
 
-    <!-- COPY RIGHT STARTS FROM HERE-->
-    <section class="p-1 bg-dark">
+    <!-- Copy right start -->
+    <section class="p-1 bg-dark imgga">
         <div class="container text-dark text-center">
             <span class="h1 lead fw-bold text-white ">
                 All right reserve &copy; bhOjaN <?php echo date("Y"); ?>
             </span>
         </div>
     </section>
-    <!-- END OF COPY RIGHT PART -->
+    <!-- Copy right Ends -->
 
 </body>
 
