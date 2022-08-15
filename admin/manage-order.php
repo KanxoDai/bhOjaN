@@ -24,6 +24,7 @@ include('partials/menu.php');
         <table class="tbl-full">
             <tr>
                 <th>S.N</th>
+                <th>U.ID</th>
                 <th>Food</th>
                 <th>Price</th>
                 <th>Qty</th>
@@ -54,6 +55,7 @@ include('partials/menu.php');
                 while ($row = mysqli_fetch_assoc($res)) {
                     //get all the order details
                     $id = $row['id'];
+                    $uid  = $row['uid'];
                     $food = $row['food'];
                     $price = $row['price'];
                     $qty = $row['qty'];
@@ -67,6 +69,7 @@ include('partials/menu.php');
             ?>
                     <tr>
                         <td><?php echo $sn++; ?></td>
+                        <td><?php echo $uid; ?></td>
                         <td><?php echo $food; ?></td>
                         <td><?php echo $price; ?></td>
                         <td><?php echo $qty; ?></td>
